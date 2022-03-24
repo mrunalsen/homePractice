@@ -1,2 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
 
+// Project base and component style import
+@import '../src/assets/sass/base/index';
+
+@import '../src/assets/sass/vendors/bootstrap-base';
+@import '../src/assets/sass/vendors/bootstrap-components';
+
+// Project Specific Components
+// @import 'component/index';
+@import '../src/assets/sass/component/index';
+
+// Now other style import
+@import '../src/assets/sass/layout/index';
+@import '../src/assets/sass/utilities/index';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap.scss'

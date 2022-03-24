@@ -1,0 +1,86 @@
+aside {
+  flex: 0 0 250px;
+  background-color: $white;
+  transition: 1s all;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  .nav-head{
+   padding: 20px 0;
+   margin: 0 6px;
+  }
+  @include media-query(mobile) {
+    
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    @include position (absolute, 0,0,0,0,)
+  
+  }
+}
+.nav-head-text {
+  padding-left: 20px;
+}
+.nav-li , .nav-link{
+  // padding: 24px ;
+ 
+  .icon {
+    padding-right: 20px;
+  }
+  .nav-link:hover {
+    .icon {
+      color: $success-primary;
+    }
+    color: $success-primary;
+    background-color: $success-light;
+    border-left: 2px solid $success-primary ;
+  }
+}
+.nav-link {
+  border-left: 2px solid transparent ;
+}
+.nav-1 {
+  padding-bottom: 80px;
+}
+
+// SIDEBAR
+#aside {
+  display: none;
+}
+#aside:checked {
+  & ~ aside {
+    flex: 0 0 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  & ~ aside .nav-li, .nav-head-text {
+    // flex: 0 0 0;
+    transform: translateX(100%);
+    transition: all 1s;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+// #aside:not(checked) {
+//   // & ~ aside {
+//   //   // flex: 0 0 250;
+//   //   transform: translateX(-100%);
+//   //   transition: all 1.4s;
+//   //   overflow-x: hidden;
+//   // }
+//   & ~ aside .side-text, .nav-head-text, .side-icon {
+//     // flex: 0 0 250;
+//     transform: translateX(100%);
+//     transition: all 1.4s;
+//     overflow-x: hidden;
+//   }
+// }
+// Sidebar Toggle
+.toggle {
+  padding: 28px;
+    cursor: pointer;
+}

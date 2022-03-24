@@ -1,0 +1,82 @@
+header {
+    border-bottom: 2px solid $bg-color;
+    // padding: 20px;
+    height: $header-height;
+
+    // Brand name
+    .brand-icon {
+        width:$brand-icon-width;   
+        height: $brand-icon-height;
+        font-size:$font-size-medium ;
+        font-weight: $font-weight;
+        .icon-square {
+            font-size: 24px;
+        }
+        @include media-query(mobile-min) {
+            width: 60px;
+          }
+    }
+    // Profile section
+    .avatar {
+        padding-right: 40px;
+        width: $brand-icon-width;
+        justify-content: space-between;
+        @include media-query(mobile-min) {
+            padding-right: 20px ;
+          }
+        .profile-img {
+            height: 40px;
+            border-radius: 50%;
+        }
+
+    }
+    @include media-query(mobile) {
+        .dropdown {
+            position: relative;
+            transition: all 1s;
+            .profile {
+                position: absolute;
+                top: 88px;
+                right: 20px;
+                z-index: 1000;
+                width: 0px;
+                height: 0px;
+                background-color: $success-secondary;
+                color: $white;
+                border-radius: 10px;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                transition: all 0.5s;        
+                .icon{
+                    color: $white;
+                }
+                .avatar {
+                    flex-direction: column-reverse;
+                    padding-right: 0;
+                    .icon-circle-down {
+                        display: none;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+#profile {
+    display: none;
+    &:checked ~ .dropdown .profile  {
+        width: 100px;
+        height: 200px;
+    }
+    &:checked ~ .avatar .icon-keyboard_arrow_right {
+        transform: rotate(90deg);
+    }
+}
+.drop-arrow {
+    display: none;
+    @include media-query(mobile) {
+        display: block;
+    }
+}

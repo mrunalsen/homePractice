@@ -1,0 +1,33 @@
+// Theme colors
+$primary: #00b11c;
+$secondary: #f8f8f8;
+$success-primary: #23a673;
+$success-secondary:#83bcbd;
+$success-light:#f2fcf4;
+$danger:red;
+$btn-primary: #438ffe;
+$gray: #989d9e;
+$gray-light: #c8c8c8;
+$warm: #f08b2d; 
+$white: #ffffff;
+$dark:#000000;
+$info-primary:#4b44ff;
+$info-secondary:#389cfe;
+// $theme-colors: (
+//   "primary": $primary,
+//   "secondary": $secondary,
+// );
+
+// Mainly use for UI controls like Buttons
+// Mainly used all over
+
+// Used for Search and other input bg
+$input-bg : #f5f7f9;
+
+// Additional Shades of gray color
+$light: #f8fafc;
+$extra-light: #fcfcfc;
+$bg-color: #f8f8f8;
+// Dedicated for button text only
+$btn-text-primary: $primary;
+
